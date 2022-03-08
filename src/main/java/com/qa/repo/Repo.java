@@ -8,15 +8,13 @@ import org.springframework.stereotype.Repository;
 
 import com.qa.books.Books;
 
-
 @Repository
 public interface Repo extends JpaRepository<Books, Integer> {
-	
-	@Query("SELECT b from Books b")
-    List<Books> findAllJPQL();
 
+	@Query("SELECT book from Books book")
+	List<Books> findAllJPQL();
 
-    @Query(value = "SELECT * from Books", nativeQuery = true)
-    List<Books> findAllSQL();
+	@Query(value = "SELECT * from Books", nativeQuery = true)
+	List<Books> findAllSQL();
 
 }

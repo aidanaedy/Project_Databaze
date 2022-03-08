@@ -10,6 +10,7 @@ import org.jsoup.select.Elements;
 import org.springframework.boot.SpringApplication;
 
 import com.qa.Application;
+import com.qa.books.Books;
 
 public class Scrape extends Application {
 
@@ -28,6 +29,8 @@ public class Scrape extends Application {
 	private static AbstractList<Element> temp3;
 	private static ArrayList<String> scrapedDataFull;
 
+	static Books books1 = new Books();
+
 	// web scraping site set up for people to test web scraping - all data is fake
 	// and randomly assigned
 	final static String url = "https://books.toscrape.com/";
@@ -35,7 +38,7 @@ public class Scrape extends Application {
 	public Scrape() {
 	}
 
-	public static ArrayList<String> Scrape() throws IOException {
+	public static Books Scrape() throws IOException {
 
 		SpringApplication.run(Scrape.class);
 		// connects with the url to get the site
@@ -47,7 +50,7 @@ public class Scrape extends Application {
 
 			temp1 = elements.removeClass("price_color");
 			// removing the junk from the data
-			scrapedData = temp1.toString().replaceAll("(<p>|</p>)", "");
+			scrapedData = temp1.toString().replaceAll("(<p>|</p>|£)", "");
 			// split on new line
 			String[] intoLines1 = scrapedData.split("\\r?\\n");
 
@@ -84,15 +87,27 @@ public class Scrape extends Application {
 			System.out.println(newDataID);
 			System.out.println(newDataTitle);
 
+			// String newbie = (newDataTitle.get(0).toString()); Books books = new Books();
+			// books.setTitle(newbie);
+
+			for (int poo = 0; poo < newDataTitle.size(); poo++) {
+				String newbie1 = (newDataTitle.get(poo).toString());
+
+				books1.setTitle(newbie1);
+
+				Double newbie2 = Double.valueOf(newDataPrice.get(poo));
+				books1.setPrice(newbie2);
+				Integer newbie3 = (newDataID.get(poo));
+				books1.setId(newbie3);
+				Boolean newbie4 = (newDataStock.get(poo).equals("In stock"));
+				books1.setInStock(newbie4);
+			}
+
 		} catch (Exception ex) {
 			ex.printStackTrace();
 		}
 
-		return scrapedDataFull;
-	}
-
-	public static ArrayList<String> scrapedData() {
-		return scrapedDataFull;
+		return books1;
 	}
 
 }
