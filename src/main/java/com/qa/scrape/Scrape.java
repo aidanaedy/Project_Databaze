@@ -81,26 +81,21 @@ public class Scrape extends Application {
 				newDataID.add(x + 1);
 			}
 
-			// This print to the screen of the data will be removed before finalising
-			System.out.println(newDataPrice);
-			System.out.println(newDataStock);
-			System.out.println(newDataID);
-			System.out.println(newDataTitle);
-
-			// String newbie = (newDataTitle.get(0).toString()); Books books = new Books();
-			// books.setTitle(newbie);
+			// adding the data together and putting it in Books1 in the correct order and format
 
 			for (int poo = 0; poo < newDataTitle.size(); poo++) {
+
 				String newbie1 = (newDataTitle.get(poo).toString());
-
 				books1.setTitle(newbie1);
-
 				Double newbie2 = Double.valueOf(newDataPrice.get(poo));
 				books1.setPrice(newbie2);
 				Integer newbie3 = (newDataID.get(poo));
 				books1.setId(newbie3);
 				Boolean newbie4 = (newDataStock.get(poo).equals("In stock"));
 				books1.setInStock(newbie4);
+				
+				scrapedDataFull = books1;
+				System.out.println("books1 = " + books1);
 			}
 
 		} catch (Exception ex) {
