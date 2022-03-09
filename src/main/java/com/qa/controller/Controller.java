@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.qa.bookService.BookService;
 import com.qa.books.Books;
 
-@RestController // Tells Spring this is a Rest controller and that Spring needs to manage it
+@RestController // This is a Rest controller and Spring needs to manage it
 public class Controller {
 
 	private BookService service;

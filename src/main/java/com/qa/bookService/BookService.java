@@ -3,11 +3,8 @@ package com.qa.bookService;
 import java.io.IOException;
 import java.util.List;
 import java.util.Optional;
-
 import javax.persistence.EntityNotFoundException;
-
 import org.springframework.beans.factory.annotation.Autowired;
-//import org.springframework.stereotype.Service;
 import org.springframework.stereotype.Service;
 
 import com.qa.books.Books;
@@ -54,7 +51,6 @@ public class BookService {
 	// update by id
 	public Books updateBooks(Integer id, Books book) {
 		Books foundBooks = this.getId(id);
-
 		foundBooks.setTitle(book.getTitle());
 		foundBooks.setPrice(book.getPrice());
 		foundBooks.setInStock(book.getInStock());
@@ -66,7 +62,5 @@ public class BookService {
 		this.repo.deleteById(id);
 		return !this.repo.existsById(id);
 	}
-	
-	
 
 }
