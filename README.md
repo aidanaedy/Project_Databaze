@@ -33,7 +33,7 @@ Here is a screen shot of the MySQL data base setup and running from the applicat
 
 <img width="720" alt="image" src="https://user-images.githubusercontent.com/11161945/157708802-a443c238-c7d3-4ee2-9804-a06833929546.png">
 
-There are lots of tests done, but loads more to go yet! I am finding the tests very challenging.
+Day 4 There are lots of tests done, but loads more to go yet! I am finding the tests very challenging.
 
 <img width="211" alt="image" src="https://user-images.githubusercontent.com/11161945/157713493-9dfcd25b-d876-4eda-a29e-aa6b2ef6aebe.png">
 
@@ -41,17 +41,17 @@ There are lots of tests done, but loads more to go yet! I am finding the tests v
 
 The data can be sent from Postman to the application and then through to the database or retrieved from the data base and queried through the apllication.
 
-I am nearing the end of day 4 and I an neering the end of the main section of the project and looking forward to finishing off tomorrow!
-
 <img width="808" alt="image" src="https://user-images.githubusercontent.com/11161945/157709973-60d9c520-1d56-4686-8dce-074f8b51b945.png">
 
 Throughout the project, I have been working on the development commits of the application and then merging the branches at regular intevals when it is safe or appropriate to do so.
 
 <img width="531" alt="image" src="https://user-images.githubusercontent.com/11161945/157710133-6a1ebce1-56a0-46ba-b174-16a3f986796f.png">
 
-Day 4 After some wasted time with a problem between the Eclipse schema and MySQL, finally testing is going well  !!!
+After some wasted time with a problem between the Eclipse schema and MySQL, finally testing is going well  !!!
 
 <img width="811" alt="image" src="https://user-images.githubusercontent.com/11161945/157713217-8bc2207c-0cc7-4fae-b3d7-1b946b6a11ef.png">
+
+I am nearing the end of day 4 and I an neering the end of the main section of the project and looking forward to finishing off tomorrow!
 
 <img width="728" alt="image" src="https://user-images.githubusercontent.com/11161945/157713744-d48b034e-acbe-4ed7-98a4-cf803c8e9da3.png">
 
