@@ -31,6 +31,14 @@ public class Books {
 		this.price = price;
 		this.inStock = inStock;
 	}
+	
+	// full args constructor without id
+	public Books(String title, Double price, Boolean inStock) {
+		super();
+		this.title = title;
+		this.price = price;
+		this.inStock = inStock;
+	}
 
 	// getters and setters
 	public String getTitle() {
