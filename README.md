@@ -49,9 +49,6 @@ Throughout the project, I have been working on the development commits of the ap
 
 After some wasted time with a problem between the Eclipse schema and MySQL, finally testing is going well  !!!
 
-<img width="811" alt="image" src="https://user-images.githubusercontent.com/11161945/157713217-8bc2207c-0cc7-4fae-b3d7-1b946b6a11ef.png">
-
-I am nearing the end of day 4 and I an neering the end of the main section of the project and looking forward to finishing off tomorrow!
-
 <img width="728" alt="image" src="https://user-images.githubusercontent.com/11161945/157713744-d48b034e-acbe-4ed7-98a4-cf803c8e9da3.png">
 
+I am nearing the end of day 4 and I an neering the end of the main section of the project and looking forward to finishing off tomorrow!
