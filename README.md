@@ -16,6 +16,18 @@ Here I can get data by specific ID.
 
 <img width="899" alt="image" src="https://user-images.githubusercontent.com/11161945/157713952-474c9a70-ab42-49da-a572-f570f1e47dc5.png">
 
+or updating anyone?
+
+<img width="948" alt="image" src="https://user-images.githubusercontent.com/11161945/157714590-1ade494b-50b3-49f7-b89b-1d8e6985e320.png">
+
+I can create specific or random named books: -
+
+<img width="824" alt="image" src="https://user-images.githubusercontent.com/11161945/157714874-74355ec9-5c11-406a-9943-c1971d7151e6.png">
+
+Or delete them...bye, bye book 208 ;-)
+
+<img width="698" alt="image" src="https://user-images.githubusercontent.com/11161945/157715177-47125a33-9cff-421e-931d-e4a508243345.png">
+
 
 Here is a screen shot of the MySQL data base setup and running from the application: -
 
