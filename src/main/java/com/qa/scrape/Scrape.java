@@ -94,7 +94,6 @@ public class Scrape extends Application {
 				Boolean newbie4 = (newDataStock.get(poo).equals("In stock"));
 				books1.setInStock(newbie4);
 				
-				scrapedDataFull = books1;
 				System.out.println("books1 = " + books1);
 			}
 

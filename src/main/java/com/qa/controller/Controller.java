@@ -44,7 +44,7 @@ public class Controller {
 
 	// get all the books
 	@GetMapping("/getAllBooks")
-	public ResponseEntity<List<Books>> getAll() {
+	public ResponseEntity<List<Books>> getAllBooks() {
 		return new ResponseEntity<List<Books>>(this.service.getAllBooks(), HttpStatus.OK);
 	}
 
