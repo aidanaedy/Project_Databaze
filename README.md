@@ -7,6 +7,11 @@ Day 1/ I added the controller. service and repo files and add in the database co
 
 Day 2/ Over the next couple of days, I got the the basics of the project together and started testing.
 
+Here is a localhost h2 database with Postman happily sending and receiving (and creating, updating and deleting) MySQL data to and from the database.
+
+<img width="1002" alt="image" src="https://user-images.githubusercontent.com/11161945/157719583-0e26e021-d0f1-4e83-8578-40f9a1ec4e31.png">
+
+
 
 Day 3/ This is a screen shot of the application running with Postman software posting, getting updating and deleting to and from the data base.
 
