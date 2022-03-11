@@ -1,6 +1,5 @@
 package com.qa.bookService;
 
-
 import java.io.IOException;
 import java.util.List;
 import java.util.Optional;
@@ -11,6 +10,14 @@ import org.springframework.stereotype.Service;
 import com.qa.books.Books;
 import com.qa.repo.Repo;
 import com.qa.scrape.Scrape;
+
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
+
+@Data
 
 @Service
 public class BookService {
@@ -26,18 +33,25 @@ public class BookService {
 		return this.repo.save(book);
 	}
 
+	
+	// __________________________________________________________________________
+
+	// _______________________SELECT * FROM BOOKS___________________________
+	
 	public List<Books> getAllBooks() {
-		// SELECT * FROM books;
+
 		return this.repo.findAll();
 	}
 
-	public Books getAll() throws IOException {
-		// test version to check working
-		System.out.println("returning from BookService " + Scrape.Scrape());
-		return Scrape.Scrape();
-	}
 
-	// get by id
+	
+	
+
+
+	// __________________________________________________________________________
+
+	// ______________________________Get By id___________________________________
+	
 	public Books getId(Integer id) {
 		Optional<Books> bookLook = this.repo.findById(id);
 		if (bookLook.isPresent()) {
@@ -47,10 +61,13 @@ public class BookService {
 		}
 
 	}
+
 	
+	
+ 
+	// __________________________________________________________________________
 
-
-	// update by id
+	// _____________________________Update By id_________________________________
 	public Books updateBooks(Integer id, Books book) {
 		Books foundBooks = this.getId(id);
 		foundBooks.setTitle(book.getTitle());
@@ -59,10 +76,23 @@ public class BookService {
 		return this.repo.save(foundBooks);
 	}
 
-	// Delete by id
+
+	// __________________________________________________________________________
+
+	// _____________________________Delete By id_________________________________
 	public boolean deleteBook(Integer id) {
 		this.repo.deleteById(id);
 		return !this.repo.existsById(id);
+	}
+	
+	// __________________________________________________________________________
+
+	// _____________________________Get Scraping_________________________________
+	
+	public Books getAll() throws IOException {
+		// test version to check working
+		System.out.println("returning from BookService " + Scrape.Scrape());
+		return Scrape.Scrape();
 	}
 
 }
