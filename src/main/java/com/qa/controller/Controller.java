@@ -26,7 +26,7 @@ import lombok.Setter;
 import lombok.ToString;
 
 @Data
-
+  
 // __________________________________________________________________________
 
 // ___________This is a Rest controller and Spring needs to manage it____________
