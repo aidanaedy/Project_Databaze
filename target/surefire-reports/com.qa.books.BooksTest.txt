@@ -1,0 +1,81 @@
+-------------------------------------------------------------------------------
+Test set: com.qa.books.BooksTest
+-------------------------------------------------------------------------------
+Tests run: 11, Failures: 0, Errors: 11, Skipped: 0, Time elapsed: 0.011 s <<< FAILURE! - in com.qa.books.BooksTest
+testGetInStock  Time elapsed: 0.003 s  <<< ERROR!
+org.mockito.exceptions.base.MockitoException: 
+
+Cannot mock/spy class java.lang.Integer
+Mockito cannot mock/spy because :
+ - final class
+
+testGetPrice  Time elapsed: 0 s  <<< ERROR!
+org.mockito.exceptions.base.MockitoException: 
+
+Cannot mock/spy class java.lang.Integer
+Mockito cannot mock/spy because :
+ - final class
+
+testGetTitle  Time elapsed: 0 s  <<< ERROR!
+org.mockito.exceptions.base.MockitoException: 
+
+Cannot mock/spy class java.lang.Integer
+Mockito cannot mock/spy because :
+ - final class
+
+testBooks  Time elapsed: 0 s  <<< ERROR!
+org.mockito.exceptions.base.MockitoException: 
+
+Cannot mock/spy class java.lang.Integer
+Mockito cannot mock/spy because :
+ - final class
+
+testGetId  Time elapsed: 0 s  <<< ERROR!
+org.mockito.exceptions.base.MockitoException: 
+
+Cannot mock/spy class java.lang.Integer
+Mockito cannot mock/spy because :
+ - final class
+
+testSetId  Time elapsed: 0 s  <<< ERROR!
+org.mockito.exceptions.base.MockitoException: 
+
+Cannot mock/spy class java.lang.Integer
+Mockito cannot mock/spy because :
+ - final class
+
+testToString  Time elapsed: 0 s  <<< ERROR!
+org.mockito.exceptions.base.MockitoException: 
+
+Cannot mock/spy class java.lang.Integer
+Mockito cannot mock/spy because :
+ - final class
+
+testSetInStock  Time elapsed: 0.003 s  <<< ERROR!
+org.mockito.exceptions.base.MockitoException: 
+
+Cannot mock/spy class java.lang.Integer
+Mockito cannot mock/spy because :
+ - final class
+
+testBooksStringIntegerDoubleBoolean  Time elapsed: 0 s  <<< ERROR!
+org.mockito.exceptions.base.MockitoException: 
+
+Cannot mock/spy class java.lang.Integer
+Mockito cannot mock/spy because :
+ - final class
+
+testSetPrice  Time elapsed: 0 s  <<< ERROR!
+org.mockito.exceptions.base.MockitoException: 
+
+Cannot mock/spy class java.lang.Integer
+Mockito cannot mock/spy because :
+ - final class
+
+testSetTitle  Time elapsed: 0.001 s  <<< ERROR!
+org.mockito.exceptions.base.MockitoException: 
+
+Cannot mock/spy class java.lang.Integer
+Mockito cannot mock/spy because :
+ - final class
+

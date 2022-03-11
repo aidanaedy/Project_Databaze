@@ -44,6 +44,8 @@ public class BookServiceTest {
 	@Test
 	public void testBookService() throws IOException {
 		Scrape.Scrape();
+		
+		System.out.println("These values are being pulled from an online website and is live data at time of capture - The test has passed.");
 	}
 
 

@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.qa.controller.ControllerTest
+-------------------------------------------------------------------------------
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.562 s - in com.qa.controller.ControllerTest

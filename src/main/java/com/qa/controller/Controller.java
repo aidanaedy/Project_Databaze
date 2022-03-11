@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.qa.bookService.BookService;
 import com.qa.books.Books;
+import com.qa.scrape.Scrape;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -113,9 +114,17 @@ public class Controller {
 
 	// ______A Trial End Point For Adding The Internet Data To The Data Base_______
 	
-	@RequestMapping("/loaded")
-    public String loadingPage() {
-        return " test ";
+	@PostMapping("/loaded")
+	public ResponseEntity<Books> loadBook(@RequestBody Books book) throws IOException {
+		//return new ResponseEntity<Books>(this.service.loadBook(book), HttpStatus.CREATED);
+		
+		return new ResponseEntity<Books>(Scrape.Scrape(), HttpStatus.CREATED);
     }
 
+	/*                                     just a reminder - to be removed
+	 * @PostMapping("/create") public ResponseEntity<Books> createBook(@RequestBody
+	 * Books book) { return new ResponseEntity<Books>(this.service.createBook(book),
+	 * HttpStatus.CREATED); }
+	 */
+	
 }
