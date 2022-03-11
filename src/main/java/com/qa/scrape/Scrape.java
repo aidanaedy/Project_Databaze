@@ -120,14 +120,19 @@ public class Scrape extends Application {
 				Boolean newbie4 = (newDataStock.get(poo).equals("In stock"));
 				books1.setInStock(newbie4);
 
-				System.out.println("books1 = " + books1);
+				System.out.println("Website data to be added = " + books1);
+
 			}
 
 		} catch (Exception ex) {
 			ex.printStackTrace();
 		}
+		System.out.println();
+		System.out.println("     These values were due to imported into the data base, but because of time constraints, were not added yet, ");
+		System.out.println("              however it proves the link, data and formatting is all correct and ready to be added.");
+		System.out.println();
 
 		return books1;
 	}
-
+  
 }
