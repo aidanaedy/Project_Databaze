@@ -1,5 +1,5 @@
 # Project Databaze
-This is my project for DFEW10 cohort implementing Sprint and MySQL database. We were tasked with creating an application in one week that fulfills a criterior and utilises MySQL database. I expect this project to be very challenging given the short one week timescale, but looking forward to see how far I can go.
+This is my project for DFEW10 cohort implementing Java, Jira Sprint, MySQL & H2 database and API's. We were tasked with creating an application in one week that fulfills a criterior and utilises MySQL database. I expect this project to be very challenging given the short one week timescale, but looking forward to see how far I can go.
 
 
 The project is in bare bones form at present, over the next few days I will begin add the basic files and start fleshing out the project.
