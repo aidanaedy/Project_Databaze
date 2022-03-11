@@ -52,7 +52,20 @@ public class Scrape extends Application {
 	public static Books Scrape() throws IOException {
 
 		SpringApplication.run(Scrape.class);
-	// __________________________________________________________________________
+	scrapedGetNCleanData();
+		System.out.println();
+		System.out.println("     These values were due to imported into the data base, but because of time constraints, were not added yet, ");
+		System.out.println("              however it proves the link, data and formatting is all correct and ready to be added.");
+		System.out.println();
+
+		return books1;
+	}
+
+	
+	
+	
+	private static void scrapedGetNCleanData() {
+		// __________________________________________________________________________
 
 	// __________________connects with the url to get the site______________________
 
@@ -97,42 +110,54 @@ public class Scrape extends Application {
 			// moving the data to the new ArrayLists for use
 	// __________________________________________________________________________
 
-	// ______________moving the data to the new ArrayLists for use_________________
-			for (int x = 0; x < intoLines3.length; x++) {
-				newDataTitle.add(intoLines3[x].substring(71, intoLines3[x].length()));
-				newDataPrice.add(intoLines1[x]);
-				newDataStock.add(intoLines2[x]);
-				newDataID.add(x + 1);
-			}
-
-	// __________________________________________________________________________
-	// ____________Adding the data together and putting it in Books1_______________
-	// _____________________in the correct order and format________________________	
-
-			for (int poo = 0; poo < newDataTitle.size(); poo++) {
-
-				String newbie1 = (newDataTitle.get(poo).toString());
-				books1.setTitle(newbie1);
-				Double newbie2 = Double.valueOf(newDataPrice.get(poo));
-				books1.setPrice(newbie2);
-				Integer newbie3 = (newDataID.get(poo));
-				books1.setId(newbie3);
-				Boolean newbie4 = (newDataStock.get(poo).equals("In stock"));
-				books1.setInStock(newbie4);
-
-				System.out.println("Website data to be added = " + books1);
-
-			}
+	scrapedToArrayList(intoLines1, intoLines2, intoLines3);
+  
+	scrapedTogether();
 
 		} catch (Exception ex) {
 			ex.printStackTrace();
 		}
-		System.out.println();
-		System.out.println("     These values were due to imported into the data base, but because of time constraints, were not added yet, ");
-		System.out.println("              however it proves the link, data and formatting is all correct and ready to be added.");
-		System.out.println();
+	}
 
-		return books1;
+	
+	
+	
+	private static void scrapedTogether() throws NumberFormatException {
+// __________________________________________________________________________
+// ____________Adding the data together and putting it in Books1_______________
+// _____________________in the correct order and format________________________	
+
+		for (int poo = 0; poo < newDataTitle.size(); poo++) {
+
+			String newbie1 = (newDataTitle.get(poo).toString());
+			books1.setTitle(newbie1);
+			Double newbie2 = Double.valueOf(newDataPrice.get(poo));
+			books1.setPrice(newbie2);
+			Integer newbie3 = (newDataID.get(poo));
+			books1.setId(newbie3);
+			Boolean newbie4 = (newDataStock.get(poo).equals("In stock"));
+			books1.setInStock(newbie4);
+
+			System.out.println("Website data to be added = " + books1);
+
+		}
+	}
+
+	
+	
+	
+	// __________________________________________________________________________
+
+	// ______________moving the data to the new ArrayLists for use_________________
+	
+	private static void scrapedToArrayList(String[] intoLines1, String[] intoLines2, String[] intoLines3) {
+		
+		for (int x = 0; x < intoLines3.length; x++) {
+			newDataTitle.add(intoLines3[x].substring(71, intoLines3[x].length()));
+			newDataPrice.add(intoLines1[x]);
+			newDataStock.add(intoLines2[x]);
+			newDataID.add(x + 1);
+		}
 	}
   
 }
