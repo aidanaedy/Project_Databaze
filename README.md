@@ -1,14 +1,14 @@
 # Project Databaze
 This is my project for DFEW10 cohort implementing Sprint and MySQL database. We were tasked with creating an application in one week that fulfills a criterior and utilises MySQL database. I expect this project to be very challenging given the short one week timescale, but looking forward to see how far I can go.
 
-Here is a link to my Jira project site to view my boards etc.
-
-https://aidanaedy.atlassian.net/jira/software/projects/MPD/boards/2
-
 
 The project is in bare bones form at present, over the next few days I will begin add the basic files and start fleshing out the project.
 
 Day 1/ I added the controller. service and repo files and add in the database connection and entries.
+
+Here is a link to my Jira project site to view my boards and track my progress through this process.
+
+https://aidanaedy.atlassian.net/jira/software/projects/MPD/boards/2
 
 Day 2/ Over the next couple of days, I got the the basics of the project together and started testing.
 
