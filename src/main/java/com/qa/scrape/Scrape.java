@@ -12,9 +12,17 @@ import org.springframework.boot.SpringApplication;
 import com.qa.Application;
 import com.qa.books.Books;
 
+import lombok.Data;
+
+@Data
+
 public class Scrape extends Application {
 
-	// Variables and lists to store the data
+	
+	// __________________________________________________________________________
+
+	// ___________________Variables and lists to store the data______________________
+
 	public static int counter;
 	public static ArrayList<String> newDataTitle = new ArrayList<>();
 	public static ArrayList<String> newDataPrice = new ArrayList<>();
@@ -31,8 +39,11 @@ public class Scrape extends Application {
 
 	static Books books1 = new Books();
 
-	// web scraping site set up for people to test web scraping - all data is fake
-	// and randomly assigned
+	// __________________________________________________________________________
+
+	// _________web scraping site set up for people to test web scraping____________
+	// _______________ all data is fake and randomly assigned_______________________
+
 	final static String url = "https://books.toscrape.com/";
 
 	public Scrape() {
@@ -41,39 +52,52 @@ public class Scrape extends Application {
 	public static Books Scrape() throws IOException {
 
 		SpringApplication.run(Scrape.class);
-		// connects with the url to get the site
+	// __________________________________________________________________________
+
+	// __________________connects with the url to get the site______________________
+
 		try {
 			Document doc = Jsoup.connect(url).get();
 
-			// get elements by price
+	// __________________________________________________________________________
+
+	// _______________________get elements by price_______________________________
+
 			Elements elements = doc.getElementsByClass("price_color");
 
 			temp1 = elements.removeClass("price_color");
-			// removing the junk from the data
-			scrapedData = temp1.toString().replaceAll("(<p>|</p>|£)", "");
-			// split on new line
-			String[] intoLines1 = scrapedData.split("\\r?\\n");
+	// ____________________removing the junk from the data________________________
 
-			// get elements by instock availability;
+			scrapedData = temp1.toString().replaceAll("(<p>|</p>|£)", "");
+	// __________________________split on new line_________________________________
+
+			String[] intoLines1 = scrapedData.split("\\r?\\n");
+			
+	// ___________________get elements by instock availability;______________________
+
 			Elements elements2 = doc.getElementsByClass("instock availability");
 			temp2 = elements2.removeClass("instock availability");
-			// removing the junk from the data
+	// ____________________removing the junk from the data________________________
 			scrapedData2 = temp2.toString()
 					.replaceAll("(<p class=\"instock availability\"> <i class=\"icon-ok\"></i> |</p>)", "");
-			// split on new line
+	// __________________________split on new line_________________________________
 			String[] intoLines2 = scrapedData2.split("\\r?\\n");
 
 			// get item title from thumb nail description
 			Elements elements3 = doc.getElementsByClass("thumbnail");
 			temp3 = elements3.removeClass("thumbnail");
-			// removing the junk from the data
+	// ____________________removing the junk from the data________________________
 			scrapedData3 = temp3.toString().replaceAll("(\">)", "");
 
-			// splitting the junk information from the title
-			// split on new line
+
+	// ________________splitting the junk information from the title__________________
+	// __________________________split on new line_________________________________
 			String[] intoLines3 = scrapedData3.split("\\r?\\n");
 
 			// moving the data to the new ArrayLists for use
+	// __________________________________________________________________________
+
+	// ______________moving the data to the new ArrayLists for use_________________
 			for (int x = 0; x < intoLines3.length; x++) {
 				newDataTitle.add(intoLines3[x].substring(71, intoLines3[x].length()));
 				newDataPrice.add(intoLines1[x]);
@@ -81,7 +105,9 @@ public class Scrape extends Application {
 				newDataID.add(x + 1);
 			}
 
-			// adding the data together and putting it in Books1 in the correct order and format
+	// __________________________________________________________________________
+	// ____________Adding the data together and putting it in Books1_______________
+	// _____________________in the correct order and format________________________	
 
 			for (int poo = 0; poo < newDataTitle.size(); poo++) {
 
@@ -93,7 +119,7 @@ public class Scrape extends Application {
 				books1.setId(newbie3);
 				Boolean newbie4 = (newDataStock.get(poo).equals("In stock"));
 				books1.setInStock(newbie4);
-				
+
 				System.out.println("books1 = " + books1);
 			}
 

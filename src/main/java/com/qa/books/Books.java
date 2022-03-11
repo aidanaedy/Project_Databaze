@@ -4,10 +4,21 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
+
+@Data
+
 @Entity // Creates Books as a table
 public class Books {
 
-	// defining my variables for the database
+
+	// __________________________________________________________________________
+
+	// __________________Defining my variables for the database____________________
 
 	@Id // is the PK of our table
 	@Column(name = "ID")
@@ -19,11 +30,18 @@ public class Books {
 	@Column(name = "Stock")
 	private Boolean inStock;
 
-	// no args constructor
+	// __________________________________________________________________________
+
+	// __________________________No args Constructor____________________________
+	
 	public Books() {
 	}
 
-	// full args constructor
+
+	// __________________________________________________________________________
+
+	// _________________________full args constructor______________________________
+	
 	public Books(String title, Integer id, Double price, Boolean inStock) {
 		super();
 		this.title = title;
@@ -31,52 +49,16 @@ public class Books {
 		this.price = price;
 		this.inStock = inStock;
 	}
+
+	// __________________________________________________________________________
+
+	// ____________________full args constructor without id_________________________
 	
-	// full args constructor without id
 	public Books(String title, Double price, Boolean inStock) {
 		super();
 		this.title = title;
 		this.price = price;
 		this.inStock = inStock;
-	}
-
-	// getters and setters
-	public String getTitle() {
-		return title;
-	}
-
-	public void setTitle(String title) {
-		this.title = title;
-	}
-
-	public Integer getId() {
-		return id;
-	}
-
-	public void setId(Integer id) {
-		this.id = id;
-	}
-
-	public Double getPrice() {
-		return price;
-	}
-
-	public void setPrice(Double price) {
-		this.price = price;
-	}
-
-	public Boolean getInStock() {
-		return inStock;
-	}
-
-	public void setInStock(Boolean inStock) {
-		this.inStock = inStock;
-	}
-
-	// toString
-	@Override
-	public String toString() {
-		return "Books [title=" + title + ", id=" + id + ", price=" + price + ", inStock=" + inStock + "]";
 	}
 
 }
