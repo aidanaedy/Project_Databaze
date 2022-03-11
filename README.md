@@ -57,3 +57,10 @@ After some wasted time with a problem between the Eclipse schema and MySQL, fina
 <img width="728" alt="image" src="https://user-images.githubusercontent.com/11161945/157713744-d48b034e-acbe-4ed7-98a4-cf803c8e9da3.png">
 
 I am nearing the end of day 4 and I an neering the end of the main section of the project and looking forward to finishing off tomorrow!
+
+
+On the start of the last day and the project compiles to a stand alone jar file file with dependencies and all the tests pass.
+
+<img width="866" alt="image" src="https://user-images.githubusercontent.com/11161945/157832127-50404a3b-ef98-4f3e-bc07-a8e0706120cb.png">
+
+
